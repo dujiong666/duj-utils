@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 对象工具类bean -->
+<bean id="getObject" 
+class="duj.utils.ioc.GetObjectUtil" 
+scope="singleton" lazy-init="false"/>
+
+<!-- 静态工厂方法拿到simpleDateFormat对象 -->
+<bean id="simpleDateFormatFactory" 
+		class="duj.utils.factory.SimpleDateFormatFactory" 
+		factory-method="getSimpleDateFormat"/>
+		
+
+  
+  
+</beans>
